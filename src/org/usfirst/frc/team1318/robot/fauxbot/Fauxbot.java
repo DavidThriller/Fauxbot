@@ -312,8 +312,21 @@ public class Fauxbot extends Application
 
         // add a spacer:
         rowCount++;
+        
+        Text throttleTitle = new Text("Throttle");
+        throttleTitle.setFont(Font.font(fontDefault, FontWeight.NORMAL, 20));
+        
+        Slider throttle = new Slider();
+        throttle.setMin(0.0);
+        throttle.setMax(1.0);
+        throttle.setBlockIncrement(0.25);
+        throttle.setShowTickLabels(true);
+        throttle.setShowTickMarks(true);
 
-        Text motorsTitle = new Text("Actuators");
+        
+        
+
+        Text motorsTitle = new Text("hey");
         motorsTitle.setFont(Font.font(fontDefault, FontWeight.NORMAL, 20));
         grid.add(motorsTitle, 0, rowCount++, 2, 1);
         for (int i = 0; i <= ActuatorManager.getHightestPort(); i++)
